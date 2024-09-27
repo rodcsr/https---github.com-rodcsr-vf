@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire d'inscription - TEDx 2025</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Formulaire d'inscription</h1>
+        <p>Veuillez remplir le formulaire ci-dessous pour vous inscrire à notre événement TEDx 2025.</p>
+    </header>
+
+    <main>
+        <form action="#" method="POST" class="formulaire-inscription">
+            <table border="0">
+                <tr>
+                    <td><label for="pseudo">Pseudo* :</label></td>
+                    <td><input type="text" id="pseudo" name="pseudo" placeholder="Votre pseudo" maxlength="50" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Mot de passe :</label></td>
+                    <td><input type="password" id="password" name="password" placeholder="Votre mot de passe" maxlength="50"></td>
+                </tr>
+                <tr>
+                    <td><label for="prenom">Prénom :</label></td>
+                    <td><input type="text" id="prenom" name="prenom" placeholder="Votre prénom" maxlength="50" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email :</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="Votre email" maxlength="100" required></td>
+                </tr>
+                <tr>
+                    <td><label for="avatar">Avatar :</label></td>
+                    <td><input type="file" id="avatar" name="avatar"></td>
+                </tr>
+                <tr>
+                    <td><label for="pays">Pays :</label></td>
+                    <td>
+                        <select id="pays" name="pays" required>
+                            <option value="espagne">Espagne</option>
+                            <option value="france">France</option>
+                            <option value="italie">Italie</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Quels sont vos fruits préférés ?</label></td>
+                    <td>
+                        <input type="checkbox" id="orange" name="fruits" value="orange">
+                        <label for="orange">Orange</label><br>
+                        <input type="checkbox" id="fraise" name="fruits" value="fraise">
+                        <label for="fraise">Fraise</label><br>
+                        <input type="checkbox" id="poire" name="fruits" value="poire">
+                        <label for="poire">Poire</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Civilité :</label></td>
+                    <td>
+                        <input type="radio" id="homme" name="civilite" value="homme">
+                        <label for="homme">Homme</label><br>
+                        <input type="radio" id="femme" name="civilite" value="femme">
+                        <label for="femme">Femme</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ville">Ville :</label></td>
+                    <td><input type="text" id="ville" name="ville" placeholder="Votre ville" maxlength="100"></td>
+                </tr>
+                <tr>
+                    <td><label for="codePostal">Code Postal :</label></td>
+                    <td><input type="text" id="codePostal" name="codePostal" placeholder="Votre code postal" maxlength="5"></td>
+                </tr>
+                <tr>
+                    <td><label for="adresse">Adresse :</label></td>
+                    <td><textarea id="adresse" name="adresse" rows="4" cols="50" placeholder="Votre adresse"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="dateNaissance">Date de Naissance :</label></td>
+                    <td><input type="date" id="dateNaissance" name="dateNaissance"></td>
+                </tr>
+                <tr>
+                    <td><label for="jauge">Jauge :</label></td>
+                    <td><input type="range" id="jauge" name="jauge" min="0" max="100"></td>
+                </tr>
+                <tr>
+                    <td><label for="telephone">Téléphone :</label></td>
+                    <td><input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone"></td>
+                </tr>
+                <tr>
+                    <td><label for="recherche">Recherche :</label></td>
+                    <td><input type="search" id="recherche" name="recherche" placeholder="Recherchez ici"></td>
+                </tr>
+                <tr>
+                    <td><label for="url">URL :</label></td>
+                    <td><input type="url" id="url" name="url" placeholder="Votre site web"></td>
+                </tr>
+                <tr>
+                    <td><label for="couleur">Couleur préférée :</label></td>
+                    <td><input type="color" id="couleur" name="couleur"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="S'inscrire">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+<center><a href="mission3.html">Retour sommaire </center></a>
+    <footer>
+        <p>&copy; TEDx Paris. </p>
+    </footer>
+</body>
+</html>
