@@ -2,26 +2,26 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #fffbf5; /* Light peach background */
+    background-color: #f9f9f9; 
     margin: 0;
     padding: 0;
 }
 
 header {
     text-align: center;
-    background-color: #ff6f61; /* Coral color */
+    background-color: #ff6f61;
     color: white;
     padding: 20px 0;
 }
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.5em; 
 }
 
 p {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.1em; 
 }
 
 main {
@@ -33,15 +33,16 @@ main {
 
 .formulaire-inscription {
     background-color: white; 
-    border-radius: 10px; 
+    border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
     padding: 30px;
     width: 100%;
-    max-width: 600px;
+    max-width: 600px; 
 }
 
 table {
-    width: 100%;
+    width: 100%; 
+    border-collapse: collapse; 
 }
 
 td {
@@ -49,8 +50,8 @@ td {
 }
 
 label {
-    font-weight: bold;
-    color: #333;
+    font-weight: bold; 
+    color: #333; 
 }
 
 input[type="text"],
@@ -68,21 +69,21 @@ select {
     padding: 10px; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
-    font-size: 1em; 
-    margin-top: 5px;
+    font-size: 1em;
+    margin-top: 5px; 
     transition: border 0.3s; 
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: #ff6f61; /* Focus color matching header */
+    border-color: #ff6f61; 
 }
 
 input[type="submit"] {
-    background-color: #f39c12; /* Vibrant orange */
+    background-color: #f39c12; 
     color: white; 
-    border: none;
+    border: none; 
     border-radius: 5px; 
     padding: 12px 20px; 
     font-size: 1em;
@@ -91,17 +92,31 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #e67e22; /* Darker orange for hover */
+    background-color: #e67e22; 
 }
 
+.back-button {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.back-button a {
+    background-color: #4A90E2; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+}
+
+.back-button a:hover {
+    background-color: #357ABD; 
+
 footer {
-    text-align: center;
-    background-color: #ff6f61; /* Coral color */
-    color: white;
-    padding: 10px 0;
-    position: relative; 
-    bottom: 0; 
-    width: 100%; 
+    text-align: center; 
+    background-color: #ff6f61;
+    color: white; 
+    padding: 10px 0; 
 }
 
 @media (max-width: 600px) {
@@ -109,4 +124,3 @@ footer {
         font-size: 2em; 
     }
 }
-
