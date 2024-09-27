@@ -109,7 +109,7 @@ input[type="submit"]:hover {
     transition: background-color 0.3s; 
 }
 
-.back-button a:hover {
+.back-button a:hover 
     background-color: #357ABD; 
 
 footer {
