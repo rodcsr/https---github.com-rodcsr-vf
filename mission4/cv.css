@@ -7,7 +7,7 @@ body {
     padding: 0;
     border-radius: 5px; 
     box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
-    border: 5px solid #3388CC; 
+
 }
 header {
     display: flex;
@@ -112,6 +112,7 @@ a {
 a:hover {
     background-color: #19e0e4;
 }
+
 footer p {
     margin: 0;
 }
