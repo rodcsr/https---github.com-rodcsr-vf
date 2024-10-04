@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; 
+    background-color: #f7f9fc; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+    border: 5px solid #3388CC; 
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3388CC; 
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    color: white;
+}
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+.photo img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 20px;
+    border: 3px solid white;
+}
+.container {
+    width: 780px;
+    margin: 30px auto; 
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
+    border: 5px solid #3388CC; 
+}
+section {
+    margin-bottom: 70px; 
+}
+section h2 {
+    font-size: 20px; 
+    font-weight: bold;
+    color: #3388CC;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #3388CC;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+section h3 {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #555;
+    margin-bottom: 15px;
+}
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+a.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #3388CC;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+a.button:hover {
+    background-color: #2674A3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+a.button:active {
+    background-color: #1B5C7A;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+footer {
+    background-color: #028C9A;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.1em;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+}
+a {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #19e0e4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+a:hover {
+    background-color: #19e0e4;
+}
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    section h2 {
+        font-size: 20px; 
+    }
+
+    section h3 {
+        font-size: 20px; 
+    }
+}
