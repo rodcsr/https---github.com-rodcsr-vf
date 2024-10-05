@@ -55,7 +55,25 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        
+        .mes-projets {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 50px;
+            font-size: 1.8em;
+            color:#ffffff ;
+            background-color: #FF6347;
+            text-decoration: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3;
+        }
+        .mes-projets:hover{
+            background-color: #FF4500;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+        }
+
+    
         footer {
             margin-top: 20px;
             padding: 10px;
@@ -70,7 +88,7 @@
 </head>
 <body>
     <h1>Présentation des projets</h1>
-
+   <a href="mes projets/index.html" class="mes-projets" title="Accedez à mes projets">Mes projets</a>
     <div class="container">
         <a href="tp 1/index.html" title="Accédez à TP1">Aller vers TP 1</a>
         <a href="mission 1/index.html" title="Accédez à Mission 1">Aller vers Mission 1</a>
