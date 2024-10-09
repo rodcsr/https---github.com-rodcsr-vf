@@ -1,0 +1,23 @@
+body{
+    background-color: burlywood;
+}
+button
+{
+    border-radius: 25px;
+    width: 250px;
+    height:200px;
+    background-color: rgb(228, 196, 36);
+    border: 2px solid whitesmoke;
+    font-size: 2em;
+    color:blanchedalmond;
+    margin:30px;
+    transition: 0.2s;
+
+}
+button:hover
+{
+    color:darkcyan;
+    background-color: hotpink;
+    border: 2px solid mediumpurple;
+    transition: 150ms;
+}
