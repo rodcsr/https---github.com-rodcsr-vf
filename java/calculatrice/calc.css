@@ -46,3 +46,23 @@ input {
     padding: 10px;
     text-align: center;
 }
+a.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #3388CC;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a.button:hover {
+    background-color: #2674A3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+a.button:active {
+    background-color: #1B5C7A;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

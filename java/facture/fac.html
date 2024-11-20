@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <link rel="stylesheet" href="fac.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Facture</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Article</th>
+                    <th>Prix unitaire</th>
+                    <th>Quantité</th>
+                    <th>Résultat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Article 1</td>
+                    <td><input type="number" id="price1" value=""></td>
+                    <td><input type="number" id="quantity1" value=""></td>
+                    <td><input type="number" id="result1Elem" readonly></td>
+                </tr>
+                <tr>
+                    <td>Article 2</td>
+                    <td><input type="number" id="price2" value=""></td>
+                    <td><input type="number" id="quantity2" value=""></td>
+                    <td><input type="number" id="result2Elem" readonly></td>
+                </tr>
+                <tr>
+                    <td>Article 3</td>
+                    <td><input type="number" id="price3" value=""></td>
+                    <td><input type="number" id="quantity3" value=""></td>
+                    <td><input type="number" id="result3Elem" readonly></td>
+                </tr>
+                <tr>
+                    <td>Article 4 </td>
+                    <td><input type="number" id="price4" value=""></td>
+                    <td><input type="number" id="quantity4" value=""></td>
+                    <td><input type="number" id="result4Elem" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <strong>Total TTC:</strong> <input type="number" id="totalElem" readonly>
+        </div>
+        <div class="buttons">
+            <button id="reset">Réinitialiser</button>
+            <button id="calculate">Calculer</button>
+        </div>
+        <button id="../index.html">Retour au sommaire</button>
+    </div>
+    <script src="fac.js"></script>
+</body>
+</html>
+
+
