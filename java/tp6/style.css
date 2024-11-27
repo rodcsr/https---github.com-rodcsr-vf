@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive; 
+    background: radial-gradient(circle, #1a1a1a, #000000);
+    color: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #00ff99; 
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    background: linear-gradient(45deg, #ff0066, #ffcc00);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ffcc00, #ff0066);
+    color: #ffffff;
+    box-shadow: 0 0 15px #ffffff, 0 0 30px #ff0066, 0 0 40px #ffcc00;
+    transform: scale(1.1);
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px #00ff99;
+}
+
+a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ff0066;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00;
+}
+
+li {
+    list-style: none;
+    margin-top: 20px;
+}

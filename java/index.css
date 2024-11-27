@@ -1,71 +1,63 @@
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive; 
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-
-header {
-    background-color: #4CAF50;
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF); 
     color: white;
-    padding: 20px 0;
     text-align: center;
 }
-
-
-.menu-tp {
-    margin: 20px 0;
-    text-align: center;
+header {
+    background: linear-gradient(to right, #FF0000, #FFD700); 
+    padding: 20px;
+    border-bottom: 5px solid #000;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.menu-tp ul {
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px #000;
+}
+
+nav.menu-tp {
+    margin-top: 20px;
+}
+
+nav.menu-tp ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.menu-tp ul li {
+nav.menu-tp li {
     margin: 10px 0;
 }
 
-.menu-tp ul li a {
-    text-decoration: none;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
-
-.menu-tp ul li a:hover {
-    background-color: #45a049;
-}
-
-
-.menu-tp ul li a:active {
-    background-color: #39843c;
-}
-a.button {
+nav.menu-tp a {
     display: inline-block;
-    padding: 12px 25px;
-    background-color: #3388CC;
+    padding: 15px 30px;
+    background: linear-gradient(to bottom, #32CD32, #228B22); 
     color: white;
-    border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 3px solid #FFD700; 
+    text-shadow: 1px 1px 2px #000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-a.button:hover {
-    background-color: #2674A3;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+nav.menu-tp a:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, #228B22, #006400); 
 }
-
-a.button:active {
-    background-color: #1B5C7A;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+footer {
+    background: #000;
+    color: #FFD700;
+    padding: 15px;
+    border-top: 3px solid #FF0000;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 1rem;
 }
