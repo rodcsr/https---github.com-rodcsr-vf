@@ -149,3 +149,48 @@ a.button:active {
     background-color: #1B5C7A;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+/* Responsivité - Mobile d'abord */
+ul {
+    flex-direction: column;
+}
+
+ul li {
+    width: 90%;
+    margin: 10px auto;
+}
+
+#exercise-details {
+    width: 95%;
+}
+
+input, button, a.button {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+/* Breakpoints */
+@media (min-width: 768px) {
+    ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    ul li {
+        width: 45%;
+    }
+
+    #exercise-details {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    ul li {
+        width: 30%;
+    }
+
+    #exercise-details {
+        width: 70%;
+    }
+}
