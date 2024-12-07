@@ -1,0 +1,114 @@
+/* Style global */
+body {
+    font-family: 'Press Start 2P', cursive; /* Police pixelisée */
+    background-color: #000; /* Fond noir comme dans les jeux d'arcade */
+    color: #fff; /* Texte blanc */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centrer tout le contenu */
+    line-height: 1.5;
+}
+
+/* En-tête */
+header {
+    padding: 20px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff); /* Effet néon */
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+header p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+/* Style des questions */
+.question {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 2px solid #ff00ff; /* Bordure néon rose */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Fond transparent */
+    box-shadow: 0 0 15px #ff00ff;
+    text-align: left;
+}
+
+.question p {
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+/* Style des labels */
+label {
+    font-size: 1rem;
+    color: #00ffff;
+    text-shadow: 0 0 5px #ff00ff;
+    cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.5); /* Agrandir les cases pour un look rétro */
+}
+
+/* Boutons */
+button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #ff00ff;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #ff00ff;
+    box-shadow: 0 0 15px #00ffff;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
+    transform: scale(1.1); /* Zoom lors du survol */
+}
+
+/* Résultat */
+#result {
+    font-size: 1.5rem;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    margin-top: 20px;
+}
+
+/* Animation néon pour le texte */
+@keyframes neon {
+    0%, 100% {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #00ffff;
+    }
+}
+
+header h1,
+header p {
+    animation: neon 1.5s infinite alternate;
+}
+
+/* Ajouter une police rétro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
