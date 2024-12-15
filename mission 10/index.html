@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <link rel="stylesheet" href="style.css"> <!-- Chargement du fichier CSS externe -->
+</head>
+<body>
+    <div class="invoice-container">
+        <!-- En-tête de la facture -->
+        <header class="invoice-header">
+            <section class="company-info">
+                <h1>Rod Compagny</h1>
+                <address>
+                    <p>Adresse : 69 rue de la pinte</p>
+                    <p>Téléphone : 01 69 59 89 78</p>
+                </address>
+            </section>
+            <section class="invoice-title">
+                <h2>Facture</h2>
+                <label for="invoice-number">N° : </label>
+                <input type="number" id="invoice-number" aria-label="Numéro de facture">
+            </section>
+        </header>
+
+        <!-- Informations du client et de la date -->
+        <section class="details">
+            <div class="client-address">
+                <h3>Adresse du client :</h3>
+                <label for="client-name">Nom :</label>
+                <input type="text" id="client-name" placeholder="Nom du client">
+                <label for="client-address">Adresse :</label>
+                <input type="text" id="client-address" placeholder="Adresse du client">
+            </div>
+            <div class="invoice-date">
+                <h3>Date :</h3>
+                <label for="invoice-date">Sélectionnez la date :</label>
+                <input type="date" id="invoice-date">
+            </div>
+        </section>
+
+        <!-- Tableau des lignes de facture -->
+        <section class="table-container">
+            <table id="facture">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Quantité</th>
+                        <th>Prix Unitaire (€)</th>
+                        <th>Total (€)</th>
+                    </tr>
+                </thead>
+                <tbody id="facture-body">
+                    <!-- Modèle de ligne masqué -->
+                    <tr id="ligne-modele" class="ligne-facture" style="display:none;">
+                        <td><input type="text" class="description" placeholder="Description"></td>
+                        <td><input type="number" class="quantité" placeholder="0" value="1"></td>
+                        <td><input type="number" class="prix" placeholder="0.00" value="1.00"></td>
+                        <td><input type="text" class="total" placeholder="0.00" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Résumé de la facture -->
+        <section class="summary">
+            <div class="totals">
+                <div class="row">
+                    <label for="resultTotal">Sous-total :</label>
+                    <input type="text" id="resultTotal" placeholder="0.00" readonly>
+                </div>
+                <div class="row">
+                    <label for="remise">Remise :</label>
+                    <input type="number" id="remise" placeholder="0">
+                </div>
+                <div class="row">
+                    <label for="taxe">Taxe (10%) :</label>
+                    <input type="text" id="taxe" placeholder="0.00" readonly>
+                </div>
+                <div class="row bold">
+                    <label for="solde">Solde dû :</label>
+                    <input type="text" id="solde" placeholder="0.00" readonly>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions utilisateur -->
+        <section class="actions">
+            <button id="ajouterLigne">Ajouter une ligne</button>
+            <button id="reinitialiser">Réinitialiser</button>
+            <button id="remplissageAuto">Remplissage Automatique</button>
+            <button id="calculer">Calculer</button>
+        </section>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <a href="../index.html">Retour au menu</a>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="scripte.js"></script>
+</body>
+</html>

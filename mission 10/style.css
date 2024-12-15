@@ -1,0 +1,213 @@
+/* styles.css */
+
+/* Reset général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.invoice-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* En-tête de la facture */
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.company-info h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.company-info address {
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #7f8c8d;
+}
+
+.invoice-title h2 {
+    font-size: 2rem;
+    color: #e74c3c;
+}
+
+.invoice-title input {
+    border: none;
+    border-bottom: 2px solid #bdc3c7;
+    padding: 5px;
+    font-size: 1rem;
+    width: 150px;
+    text-align: right;
+}
+
+/* Section des détails */
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.details .client-address,
+.details .invoice-date {
+    width: 48%;
+}
+
+.details h3 {
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.details input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Tableau des lignes de facture */
+.table-container {
+    margin-bottom: 20px;
+}
+
+#facture {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#facture thead {
+    background-color: #34495e;
+    color: #fff;
+}
+
+#facture th, #facture td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#facture tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#facture input {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    background: transparent;
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Résumé des totaux */
+.summary {
+    margin-bottom: 20px;
+}
+
+.totals {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.totals .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.totals input {
+    border: none;
+    background: transparent;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100px;
+}
+
+.bold span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Boutons */
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.actions button {
+    background: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background: #27ae60;
+}
+
+.actions #reinitialiser {
+    background: #e74c3c;
+}
+
+.actions #reinitialiser:hover {
+    background: #c0392b;
+}
+
+.actions #remplissageAuto {
+    background: #3498db;
+}
+
+.actions #remplissageAuto:hover {
+    background: #2980b9;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #2980b9;
+}
