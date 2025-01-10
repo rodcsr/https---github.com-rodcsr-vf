@@ -26,42 +26,28 @@ function testqcm() {
     document.getElementById('result').innerHTML = `<p>Votre score est : ${score}/10</p>`;
 }
 
-// Fonction qui  affiche le corrigé
-document.getElementById('corrige').addEventListener('click', function () {
-    let corriges = `<h2>Corrigé</h2>`; 
-    Object.keys(answers).forEach(question => {
-        corriges += `<p>Question ${question.replace('q', '')} : Bonne réponse(s) : ${answers[question].join(', ')}</p>`;
+document.addEventListener('DOMContentLoaded', function () {
+    // Votre code ici
+    document.getElementById('correction').addEventListener('click', testqcm);
+    document.getElementById('corrige').addEventListener('click', function () {
+        let corriges = `<h2>Corrigé</h2>`;
+        Object.keys(answers).forEach(question => {
+            corriges += `<p>Question ${question.replace('q', '')} : Bonne réponse(s) : ${answers[question].join(', ')}</p>`;
+        });
+
+        const corrigesWindow = window.open('', '_blank', 'width=400,height=600');
+        corrigesWindow.document.write(`
+            <!DOCTYPE html>
+            <html lang="fr">
+            <head>
+                <meta charset="UTF-8">
+                <title>Corrigé</title>
+            </head>
+            <body>
+                ${corriges}
+            </body>
+            </html>
+        `);
+        corrigesWindow.document.close();
     });
-
-    const corrigesWindow = window.open('', '_blank', 'width=400,height=600');
-    corrigesWindow.document.write(`
-        <!DOCTYPE html>
-        <html lang="fr">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Corrigé</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    padding: 20px;
-                }
-                h2 {
-                    color: #007acc;
-                }
-                p {
-                    margin: 5px 0;
-                }
-            </style>
-        </head>
-        <body>
-            ${corriges}
-        </body>
-        </html>
-    `);
-    corrigesWindow.document.close();
 });
-
-
-// Lier les événements
-document.getElementById('correction').addEventListener('click', testqcm);
