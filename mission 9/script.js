@@ -11,37 +11,27 @@ const answers = {
     q10: ['a'] // Dragon Age: Origins
 };
 
-// Fonction pour corriger le QCM et calculer le score
+// Fonction pour corriger le QCM et afficher le score
 function testqcm() {
-let score = 0; // Initialisation du score à 0
+    let score = 0; // Initialisation du score à 0
 
-// Parcourt chaque question définie dans l'objet 'answers'
-Object.keys(answers).forEach(question => {
-    // Sélectionne toutes les réponses cochées pour cette question
-    const selected = Array.from(document.querySelectorAll(`input[name="${question}"]:checked`))
-        .map(input => input.value); // Récupère les valeurs des réponses sélectionnées
+    Object.keys(answers).forEach(question => {
+        const selected = Array.from(document.querySelectorAll(`input[name="${question}"]:checked`))
+            .map(input => input.value);
 
-    // Compare les réponses sélectionnées avec les réponses correctes
-    if (JSON.stringify(selected.sort()) === JSON.stringify(answers[question].sort())) {
-        score++; // Incrémente le score si la réponse est correcte
-    }
-});
+        // Vérifie si les réponses sélectionnées correspondent aux réponses correctes
+        if (JSON.stringify(selected.sort()) === JSON.stringify(answers[question].sort())) {
+            score++; // Augmente le score si la réponse est correcte
+        }
+    });
 
-// Affiche le score final dans un élément HTML avec l'ID 'result'
-document.getElementById('result').innerHTML = `<p>Votre score est : ${score}/10</p>`;
+    // Affiche le score dans la page
+    document.getElementById('result').innerHTML = `<p>Votre score est : ${score}/10</p>`;
 }
 
-// S'assure que le DOM est entièrement chargé avant d'exécuter le script
-document.addEventListener('DOMContentLoaded', function () {
-
-// Lie la fonction 'testqcm' au bouton ayant l'ID 'correction'
-document.getElementById('correction').addEventListener('click', testqcm);
-
-// Lie une fonction pour afficher le corrigé au bouton ayant l'ID 'corrige'
-document.getElementById('corrige').addEventListener('click', function () {
-    let corriges = `<h2>Corrigé</h2>`; // Titre pour le corrigé
-
-    // Parcourt chaque question pour générer le texte du corrigé
+// Fonction pour afficher le corrigé
+function showCorrige() {
+    let corriges = `<h2>Corrigé</h2>`;
     Object.keys(answers).forEach(question => {
         corriges += `<p>Question ${question.replace('q', '')} : Bonne réponse(s) : ${answers[question].join(', ')}</p>`;
     });
@@ -56,10 +46,27 @@ document.getElementById('corrige').addEventListener('click', function () {
             <title>Corrigé</title>
         </head>
         <body>
-            ${corriges} <!-- Insère le contenu du corrigé dans le body -->
+            ${corriges}
         </body>
         </html>
     `);
-    corrigesWindow.document.close(); 
-});
+    corrigesWindow.document.close();
+}
+
+// Fonction pour effacer les réponses sélectionnées
+function resetQuiz() {
+    // Réinitialise toutes les cases cochées et boutons radio
+    document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(input => {
+        input.checked = false;
+    });
+
+    // Efface le contenu affiché dans 'result'
+    document.getElementById('result').innerHTML = '';
+}
+
+// S'assure que le DOM est chargé avant d'ajouter les événements
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('correction').addEventListener('click', testqcm); // Bouton pour corriger
+    document.getElementById('corrige').addEventListener('click', showCorrige); // Bouton pour afficher le corrigé
+    document.getElementById('delete').addEventListener('click', resetQuiz); // Bouton pour effacer
 });
