@@ -29,7 +29,7 @@ function testqcm() {
     document.getElementById('result').innerHTML = `<p>Votre score est : ${score}/10</p>`;
 }
 
-// Fonction qui  afficher le corrigé
+// Fonction qui  affiche le corrigé
 document.getElementById('corrige').addEventListener('click', function () {
     let corriges = `<h2>Corrigé</h2>`;
     Object.keys(answers).forEach(question => {
